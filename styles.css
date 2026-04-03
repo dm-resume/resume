@@ -1,0 +1,743 @@
+:root {
+  --bg: #f4f7fb;
+  --bg-alt: #edf2f7;
+  --paper: rgba(255, 255, 255, 0.88);
+  --paper-strong: #ffffff;
+  --surface-alt: #f8fafc;
+  --ink: #0f172a;
+  --ink-soft: #1e293b;
+  --muted: #5d6b82;
+  --line: #d8e1ea;
+  --line-strong: #c8d3df;
+  --accent: #111827;
+  --accent-soft: #1f2937;
+  --accent-bronze: #a76e2d;
+  --accent-teal: #0f766e;
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+  --radius-xl: 30px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --max-width: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at top right, rgba(167, 110, 45, 0.1), transparent 28%),
+    linear-gradient(180deg, #f7f9fc 0%, #eff4f8 52%, #fbfcfe 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 68%);
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto auto 6rem -6rem;
+  width: 18rem;
+  height: 18rem;
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.14), transparent 68%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.site-header,
+.site-footer,
+.section {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 -1rem auto;
+  height: calc(100% + 0.35rem);
+  background: rgba(247, 249, 252, 0.84);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(14px);
+  z-index: -1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
+}
+
+.brand-copy {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.brand-copy strong {
+  font-size: 1rem;
+}
+
+.brand-copy span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--muted);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.site-nav a.active,
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--ink);
+  border-color: rgba(15, 118, 110, 0.4);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.9rem 1.3rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+  color: #f8fafc;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+}
+
+.button-secondary,
+.button-tertiary,
+.header-button {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: none;
+}
+
+.button-tertiary {
+  background: transparent;
+}
+
+.button-light {
+  background: #f8fafc;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.button-light-secondary {
+  background: transparent;
+  color: #e2e8f0;
+  border-color: rgba(226, 232, 240, 0.24);
+  box-shadow: none;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-tight {
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+
+.hero {
+  padding-top: 4rem;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.eyebrow,
+.impact-tag,
+.card-label,
+.company-label,
+.job-period {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.card-label,
+.impact-tag {
+  color: var(--accent-teal);
+}
+
+.hero h1,
+.section-heading h2,
+.executive-card h2,
+.contact-shell h2 {
+  font-family: "Newsreader", serif;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  max-width: 15ch;
+  margin-bottom: 1.15rem;
+}
+
+.lede,
+.section-heading p,
+.job-summary,
+.leadership-card p,
+.impact-card p,
+.principle p,
+.contact-shell p,
+.proof-item p,
+.stats-note,
+.profile-list span {
+  color: var(--muted);
+}
+
+.lede {
+  font-size: 1.09rem;
+  max-width: 62ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.hero-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.proof-item,
+.executive-card,
+.stats-card,
+.leadership-card,
+.impact-card,
+.job-card,
+.skills-card,
+.principle {
+  background: var(--paper);
+  border: 1px solid rgba(200, 211, 223, 0.75);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.proof-item {
+  border-radius: var(--radius-md);
+  padding: 1rem 1.05rem;
+}
+
+.proof-item span {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.hero-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.executive-card,
+.stats-card {
+  border-radius: var(--radius-xl);
+  padding: 1.55rem;
+}
+
+.executive-card h2 {
+  font-size: 1.55rem;
+  margin-bottom: 1.2rem;
+}
+
+.profile-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-list div {
+  display: grid;
+  gap: 0.3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(200, 211, 223, 0.75);
+}
+
+.profile-list div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.profile-list span {
+  font-size: 0.83rem;
+}
+
+.profile-list strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.stats-note {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.metric-card {
+  background: var(--surface-alt);
+  border: 1px solid rgba(200, 211, 223, 0.75);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  min-height: 8.1rem;
+}
+
+.metric-value {
+  display: block;
+  font-family: "Newsreader", serif;
+  font-size: 2rem;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+}
+
+.section-heading {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.contact-shell h2 {
+  font-size: clamp(2.4rem, 4.3vw, 3.8rem);
+  margin-bottom: 0.9rem;
+}
+
+.company-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(200, 211, 223, 0.75);
+  box-shadow: var(--shadow);
+}
+
+.company-label {
+  color: var(--muted);
+}
+
+.company-rail strong {
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.leadership-card,
+.skills-card,
+.principle {
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.45rem;
+  position: relative;
+}
+
+.leadership-card::before,
+.skills-card::before,
+.principle::before {
+  content: "";
+  position: absolute;
+  left: 1.45rem;
+  right: 1.45rem;
+  top: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 118, 110, 0.75), rgba(167, 110, 45, 0.6));
+}
+
+.leadership-card h3,
+.impact-card h3,
+.job-heading h3,
+.skills-card h3,
+.principle h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.impact-card {
+  grid-column: span 6;
+  min-height: 16rem;
+  border-radius: var(--radius-lg);
+  padding: 1.45rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-card.feature {
+  grid-column: span 6;
+}
+
+.impact-card strong {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(200, 211, 223, 0.75);
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+}
+
+.experience-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.job-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.45rem;
+}
+
+.job-period {
+  margin: 0;
+  color: var(--accent-bronze);
+  padding-top: 0.25rem;
+}
+
+.job-main {
+  min-width: 0;
+}
+
+.job-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.job-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.job-scope {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  border: 1px solid rgba(200, 211, 223, 0.75);
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.chip-group span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  border: 1px solid rgba(200, 211, 223, 0.75);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-section {
+  padding-top: 4.5rem;
+}
+
+.contact-shell {
+  background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+  color: #f8fafc;
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 1.5rem;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+}
+
+.contact-shell .eyebrow {
+  color: #94d3cd;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.reveal {
+  opacity: 1;
+  transform: none;
+  animation: rise-in 620ms both;
+}
+
+.delay-1 {
+  animation-delay: 80ms;
+}
+
+.delay-2 {
+  animation-delay: 160ms;
+}
+
+.delay-3 {
+  animation-delay: 240ms;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav {
+    width: 100%;
+    order: 3;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-layout,
+  .contact-shell,
+  .leadership-grid,
+  .skills-grid,
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card,
+  .impact-card.feature {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 4.25rem 0;
+  }
+
+  .hero {
+    padding-top: 3.2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 15vw, 4.5rem);
+  }
+
+  .hero-proof,
+  .metric-grid,
+  .impact-grid,
+  .job-card,
+  .contact-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card,
+  .impact-card.feature {
+    grid-column: span 12;
+    min-height: unset;
+  }
+
+  .job-heading {
+    flex-direction: column;
+  }
+
+  .job-scope {
+    white-space: normal;
+  }
+
+  .company-rail {
+    border-radius: 24px;
+  }
+
+  .executive-card,
+  .stats-card,
+  .impact-card,
+  .job-card,
+  .skills-card,
+  .principle,
+  .contact-shell {
+    padding: 1.2rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .site-nav a,
+  .reveal,
+  .delay-1,
+  .delay-2,
+  .delay-3 {
+    transition: none;
+    animation: none;
+  }
+}
