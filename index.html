@@ -6,13 +6,13 @@
     <title>David Margot | Engineering Leadership, Reliability, and Platform Strategy</title>
     <meta
       name="description"
-      content="David Margot is an engineering leader specializing in reliability, platform strategy, cloud-native systems, and cross-functional execution."
+      content="David Margot is an engineering leader specializing in reliability, platform strategy, cloud-native systems, and cross-functional execution at scale."
     />
-    <meta name="theme-color" content="#111827" />
+    <meta name="theme-color" content="#09090b" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -23,254 +23,296 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <img class="brand-icon" src="assets/favicon.png" alt="" width="40" height="40" />
-        <span class="brand-copy">
-          <strong>David Margot</strong>
-          <span>Engineering Leadership • Reliability • Platform</span>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#leadership">Leadership</a>
-        <a href="#impact">Impact</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="button button-secondary header-button" href="#contact">
-        Get in Touch
-      </a>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <img class="brand-icon" src="assets/favicon.png" alt="" width="36" height="36" />
+          <span class="brand-name">David Margot</span>
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#leadership">Leadership</a>
+          <a href="#impact">Impact</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="header-cta" href="#contact">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"/><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"/></svg>
+          Get in Touch
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main id="top">
-      <section class="section hero">
+      <!-- Hero -->
+      <section class="hero container">
         <div class="hero-layout">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Engineering Leadership • Site Reliability • Platform Strategy</p>
-            <h1>Engineering leadership for reliable platforms and disciplined execution.</h1>
-            <p class="lede">
-              Engineering leader with 13+ years building cloud-native systems and 4+ years leading distributed teams.
-              I build the standards, operating models, and technical foundations that help organizations ship with more
-              confidence, recover faster, and scale without unnecessary complexity.
+          <div class="hero-content">
+            <div class="hero-badge reveal">
+              <span class="dot"></span>
+              Open to senior leadership roles
+            </div>
+            <h1 class="reveal delay-1">Engineering leadership for reliable platforms at scale.</h1>
+            <p class="lede reveal delay-2">
+              13+ years building and operating resilient systems. 4+ years leading distributed
+              engineering teams. I build the standards, operating models, and technical foundations
+              that help organizations ship with confidence, recover faster, and scale without
+              unnecessary complexity.
             </p>
-            <div class="hero-actions">
-              <a class="button" href="#contact">
-                Contact
+            <div class="hero-actions reveal delay-3">
+              <a class="btn btn-primary" href="#contact">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"/><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"/></svg>
+                Contact Me
               </a>
-              <a class="button button-secondary" href="mailto:david.margot@gmail.com">Email</a>
-              <a class="button button-tertiary" href="https://www.linkedin.com/in/davidmargot" target="_blank" rel="noreferrer">
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/davidmargot" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
               </a>
-            </div>
-            <div class="hero-proof">
-              <article class="proof-item">
-                <span>Org design</span>
-                <p>Founded an SRE organization from zero for enterprise HR platforms supporting 500K+ associates.</p>
-              </article>
-              <article class="proof-item">
-                <span>Developer leverage</span>
-                <p>Standardized CI/CD, repo guardrails, and Terraform deployment patterns across GCP and Azure.</p>
-              </article>
-              <article class="proof-item">
-                <span>Operational calm</span>
-                <p>Improved MTTR, triage speed, deployment quality, and reliability through better tooling and standards.</p>
-              </article>
+              <a class="btn btn-ghost" href="mailto:david.margot@gmail.com">
+                david.margot@gmail.com
+              </a>
             </div>
           </div>
 
-          <aside class="hero-stack reveal delay-1" aria-label="Executive summary">
-            <article class="executive-card">
-              <p class="card-label">Leadership profile</p>
-              <h2>Engineering leader building reliable platforms, resilient systems, and high-trust delivery.</h2>
-              <div class="profile-list">
-                <div>
-                  <span>Leadership scope</span>
-                  <strong>Distributed teams, SRE org design, incident leadership, reliability strategy</strong>
-                </div>
-                <div>
-                  <span>Technical range</span>
-                  <strong>Kubernetes, Terraform, GitOps, observability, CI/CD, automation, AWS, GCP</strong>
-                </div>
-                <div>
-                  <span>Best fit</span>
-                  <strong>High-bar engineering organizations where scale, rigor, and developer productivity matter</strong>
-                </div>
+          <aside class="hero-sidebar" aria-label="Executive summary">
+            <div class="terminal-card reveal delay-2">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">sre-leader.yml</span>
               </div>
-            </article>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-key">role:</span> <span class="terminal-string">"SRE Engineering Manager"</span></div>
+                <div class="terminal-line"><span class="terminal-key">years:</span> <span class="terminal-value">13+</span></div>
+                <div class="terminal-line"><span class="terminal-key">leading:</span> <span class="terminal-value">4+ years</span></div>
+                <div class="terminal-line"><span class="terminal-key">scale:</span> <span class="terminal-string">"500K+ users"</span></div>
+                <div class="terminal-line"><span class="terminal-key">cloud:</span> <span class="terminal-string">"AWS, GCP, Azure"</span></div>
+                <div class="terminal-line"><span class="terminal-key">stack:</span> <span class="terminal-string">"K8s, Terraform, GitOps"</span></div>
+                <div class="terminal-line"><span class="terminal-key">focus:</span></div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-comment">- reliability-at-scale</span></div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-comment">- platform-engineering</span></div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-comment">- incident-leadership</span></div>
+                <div class="terminal-line">&nbsp;&nbsp;<span class="terminal-comment">- org-design</span></div>
+              </div>
+            </div>
 
-            <article class="stats-card">
-              <div class="card-header">
-                <p class="card-label">Selected outcomes</p>
-                <p class="stats-note">Impact across The Home Depot and Capital One</p>
+            <div class="profile-card reveal delay-3">
+              <p class="profile-card-title">Best fit</p>
+              <div class="profile-list">
+                <div class="profile-row">
+                  <span class="profile-label">Leadership scope</span>
+                  <span class="profile-value">Distributed teams, SRE org design, incident leadership, reliability strategy</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Technical range</span>
+                  <span class="profile-value">Kubernetes, Terraform, GitOps, observability, CI/CD, automation</span>
+                </div>
+                <div class="profile-row">
+                  <span class="profile-label">Environment</span>
+                  <span class="profile-value">High-bar engineering orgs where scale, rigor, and developer productivity matter</span>
+                </div>
               </div>
-              <div class="metric-grid">
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="13" data-suffix="+">13+</strong>
-                  <span>years building and operating resilient systems</span>
-                </article>
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="4" data-suffix="+">4+</strong>
-                  <span>years leading distributed engineering teams</span>
-                </article>
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="500" data-suffix="K+">500K+</strong>
-                  <span>associates supported through enterprise HR platforms</span>
-                </article>
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="40" data-suffix="%">40%</strong>
-                  <span>improvement in delivery throughput through platform standardization</span>
-                </article>
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="35" data-suffix="%">35%</strong>
-                  <span>increase in deployment volume from internal automation improvements</span>
-                </article>
-                <article class="metric-card">
-                  <strong class="metric-value" data-count="50" data-suffix="%">50%</strong>
-                  <span>reduction in deployment issues through templates and guardrails</span>
-                </article>
-              </div>
-            </article>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section class="section section-tight">
-        <div class="company-rail reveal" aria-label="Experience across">
-          <span class="company-label">Experience across</span>
-          <strong>The Home Depot</strong>
-          <strong>Capital One</strong>
-          <strong>Amazon</strong>
+      <!-- Metrics -->
+      <section class="container" style="padding: 0 0 2rem;">
+        <div class="metrics-bar reveal">
+          <div class="metric-item">
+            <strong class="metric-number" data-count="13" data-suffix="+">0</strong>
+            <span class="metric-label">Years building resilient systems</span>
+          </div>
+          <div class="metric-item">
+            <strong class="metric-number" data-count="40" data-suffix="%">0</strong>
+            <span class="metric-label">Delivery throughput improvement</span>
+          </div>
+          <div class="metric-item">
+            <strong class="metric-number" data-count="50" data-suffix="%">0</strong>
+            <span class="metric-label">Reduction in deployment issues</span>
+          </div>
         </div>
       </section>
 
-      <section id="leadership" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Leadership model</p>
-          <h2>What I bring to engineering organizations with a high performance bar.</h2>
-          <p>
+      <!-- Companies -->
+      <section class="company-section">
+        <div class="company-rail container reveal">
+          <span class="company-rail-label">Experience across</span>
+          <span class="company-divider"></span>
+          <span class="company-name">The Home Depot</span>
+          <span class="company-divider"></span>
+          <span class="company-name">Capital One</span>
+          <span class="company-divider"></span>
+          <span class="company-name">Amazon</span>
+        </div>
+      </section>
+
+      <!-- Leadership -->
+      <section id="leadership" class="section container">
+        <div class="section-header reveal">
+          <p class="section-label">Leadership model</p>
+          <h2 class="section-title">What I bring to engineering organizations with a high performance bar.</h2>
+          <p class="section-desc">
             My work combines org design, platform thinking, and operational rigor. I am most effective where
-            reliability, developer productivity, and cross-functional execution are all treated as strategic levers,
-            not side concerns.
+            reliability, developer productivity, and cross-functional execution are all treated as strategic levers.
           </p>
         </div>
         <div class="leadership-grid">
           <article class="leadership-card reveal">
+            <div class="leadership-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z"/></svg>
+            </div>
             <h3>Build and scale SRE organizations</h3>
             <p>
-              I have built SRE functions from zero, defining charters, engagement models, on-call structures,
+              Built SRE functions from zero, defining charters, engagement models, on-call structures,
               readiness reviews, and decision rhythms that give engineering teams clarity and accountability.
             </p>
           </article>
           <article class="leadership-card reveal delay-1">
+            <div class="leadership-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd"/></svg>
+            </div>
             <h3>Raise standards without adding drag</h3>
             <p>
-              I standardize delivery patterns, deployment guardrails, and observability expectations in ways that make
+              Standardize delivery patterns, deployment guardrails, and observability expectations in ways that make
               safe execution easier instead of slower.
             </p>
           </article>
           <article class="leadership-card reveal delay-2">
+            <div class="leadership-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clip-rule="evenodd"/></svg>
+            </div>
             <h3>Create calm in high-pressure environments</h3>
             <p>
-              I treat incident response as a leadership system, not just a technical event, with better communications,
+              Treat incident response as a leadership system, not just a technical event, with better communications,
               clearer ownership, and disciplined follow-through.
             </p>
           </article>
           <article class="leadership-card reveal delay-3">
+            <div class="leadership-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.28 5.22a.75.75 0 010 1.06L2.56 10l3.72 3.72a.75.75 0 01-1.06 1.06L.97 10.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0zm7.44 0a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 010-1.06zM11.377 2.011a.75.75 0 01.612.867l-2.5 14.5a.75.75 0 01-1.478-.255l2.5-14.5a.75.75 0 01.866-.612z" clip-rule="evenodd"/></svg>
+            </div>
             <h3>Lead with technical credibility</h3>
             <p>
-              My background across Kubernetes, Terraform, GitOps, CI/CD, automation, and production systems helps me
+              Background across Kubernetes, Terraform, GitOps, CI/CD, automation, and production systems helps me
               make credible tradeoffs with engineers, product leaders, and infrastructure partners.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="impact" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Selected impact</p>
-          <h2>Programs that improved scale, safety, and engineering leverage.</h2>
-          <p>
+      <!-- Impact -->
+      <section id="impact" class="section container">
+        <div class="section-header reveal">
+          <p class="section-label">Selected impact</p>
+          <h2 class="section-title">Programs that improved scale, safety, and engineering leverage.</h2>
+          <p class="section-desc">
             The strongest work on my resume is not only about uptime. It is about making teams more effective through
             better systems, better defaults, and better coordination across the organization.
           </p>
         </div>
         <div class="impact-grid">
-          <article class="impact-card feature reveal">
+          <article class="impact-card span-full reveal">
             <span class="impact-tag">The Home Depot</span>
             <h3>Built an SRE organization from zero</h3>
             <p>
               Defined the charter, engagement model, on-call structure, incident command process, and reliability
               standards for enterprise HR platforms serving more than 500,000 associates.
             </p>
-            <strong>Outcome: 99.75%+ uptime across critical services</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              99.75%+ uptime across critical services
+            </div>
           </article>
-          <article class="impact-card feature reveal delay-1">
+          <article class="impact-card reveal">
             <span class="impact-tag">Platform engineering</span>
             <h3>Standardized internal deployment automation across GCP and Azure</h3>
             <p>
               Led development of an internal platform that standardized CI/CD templates, repository configuration,
               branch protection, and Terraform deployment patterns across engineering teams.
             </p>
-            <strong>Outcome: deployment volume up 35% and deployment issues down 50%</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Deployment volume up 35%, issues down 50%
+            </div>
           </article>
-          <article class="impact-card reveal delay-2">
+          <article class="impact-card reveal delay-1">
             <span class="impact-tag">Security automation</span>
             <h3>Built an automated vulnerability management platform</h3>
             <p>
               Built a platform that scanned AWS environments and automatically replaced AMIs across clusters, turning
               vulnerability remediation into a repeatable workflow instead of a manual patching exercise.
             </p>
-            <strong>Outcome: AMI-based vulnerabilities down 80% and manual patching eliminated</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              AMI vulnerabilities down 80%, manual patching eliminated
+            </div>
           </article>
-          <article class="impact-card reveal delay-3">
+          <article class="impact-card reveal delay-2">
             <span class="impact-tag">Incident response</span>
             <h3>Created an incident communications platform</h3>
             <p>
               Built a Python and React workflow with PagerDuty, ServiceNow, Slack, and Teams integrations to improve
               crisis coordination, auditability, and stakeholder communication.
             </p>
-            <strong>Outcome: faster, clearer incident handling at enterprise scale</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Faster, clearer incident handling at enterprise scale
+            </div>
           </article>
-          <article class="impact-card reveal">
+          <article class="impact-card reveal delay-3">
             <span class="impact-tag">Platform enablement</span>
             <h3>Standardized Kubernetes and GitOps delivery</h3>
             <p>
               Established reusable Terraform and GitOps modules with platform guardrails that reduced drift and made
               safer delivery easier across teams.
             </p>
-            <strong>Outcome: 40% improvement in delivery throughput</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              40% improvement in delivery throughput
+            </div>
           </article>
-          <article class="impact-card reveal delay-1">
+          <article class="impact-card reveal delay-4">
             <span class="impact-tag">Capital One</span>
             <h3>Scaled enterprise reliability practices</h3>
             <p>
               Rolled out incident automation, observability standards, resilience patterns, playbooks, and SLO/SLI
               operating mechanisms across enterprise cloud applications.
             </p>
-            <strong>Outcome: MTTR down 35% and triage efficiency up 30%</strong>
+            <div class="impact-outcome">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              MTTR down 35%, triage efficiency up 30%
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="experience" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Experience</p>
-          <h2>Progression from operations and support into engineering leadership.</h2>
-          <p>
+      <!-- Experience -->
+      <section id="experience" class="section container">
+        <div class="section-header reveal">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">From operations into engineering leadership.</h2>
+          <p class="section-desc">
             My career path reflects deep operational grounding, increasing technical ownership, and a steady expansion
             into org leadership, platform strategy, and enterprise execution.
           </p>
         </div>
         <div class="experience-list">
           <article class="job-card reveal">
-            <p class="job-period">2024 to present</p>
-            <div class="job-main">
-              <div class="job-heading">
+            <span class="job-period">2024 &mdash; Present</span>
+            <div class="job-body">
+              <div class="job-top">
                 <div>
-                  <h3>Site Reliability Engineering Manager</h3>
-                  <p>The Home Depot • Richmond, Virginia</p>
+                  <h3 class="job-title">Site Reliability Engineering Manager</h3>
+                  <p class="job-company">The Home Depot &middot; Richmond, Virginia</p>
                 </div>
-                <span class="job-scope">Org design • SLOs • GitOps • Incident leadership</span>
+                <span class="job-scope">Org design &middot; SLOs &middot; GitOps &middot; Incident leadership</span>
               </div>
               <p class="job-summary">
                 Founded and scaled an SRE function for enterprise HR systems, leading a remote team of 10 while
@@ -281,14 +323,14 @@
           </article>
 
           <article class="job-card reveal delay-1">
-            <p class="job-period">2022 to 2024</p>
-            <div class="job-main">
-              <div class="job-heading">
+            <span class="job-period">2022 &mdash; 2024</span>
+            <div class="job-body">
+              <div class="job-top">
                 <div>
-                  <h3>Site Reliability Engineering Manager</h3>
-                  <p>Capital One • Richmond, Virginia</p>
+                  <h3 class="job-title">Site Reliability Engineering Manager</h3>
+                  <p class="job-company">Capital One &middot; Richmond, Virginia</p>
                 </div>
-                <span class="job-scope">AWS • Resilience engineering • Observability • Governance</span>
+                <span class="job-scope">AWS &middot; Resilience &middot; Observability &middot; Governance</span>
               </div>
               <p class="job-summary">
                 Led a global SRE organization supporting enterprise cloud applications on AWS, strengthening incident
@@ -298,14 +340,14 @@
           </article>
 
           <article class="job-card reveal delay-2">
-            <p class="job-period">2018 to 2022</p>
-            <div class="job-main">
-              <div class="job-heading">
+            <span class="job-period">2018 &mdash; 2022</span>
+            <div class="job-body">
+              <div class="job-top">
                 <div>
-                  <h3>Senior and Lead Site Reliability Engineer</h3>
-                  <p>Capital One • Richmond, Virginia</p>
+                  <h3 class="job-title">Senior / Lead Site Reliability Engineer</h3>
+                  <p class="job-company">Capital One &middot; Richmond, Virginia</p>
                 </div>
-                <span class="job-scope">Monitoring architecture • Automation • Reliability engineering</span>
+                <span class="job-scope">Monitoring &middot; Automation &middot; Reliability</span>
               </div>
               <p class="job-summary">
                 Designed scalable monitoring and logging systems, automated operational workflows, improved uptime,
@@ -315,14 +357,14 @@
           </article>
 
           <article class="job-card reveal delay-3">
-            <p class="job-period">2013 to 2018</p>
-            <div class="job-main">
-              <div class="job-heading">
+            <span class="job-period">2013 &mdash; 2018</span>
+            <div class="job-body">
+              <div class="job-top">
                 <div>
-                  <h3>Support Specialist Master and Support Specialist II</h3>
-                  <p>Capital One • Richmond, Virginia</p>
+                  <h3 class="job-title">Support Specialist Master / Support Specialist II</h3>
+                  <p class="job-company">Capital One &middot; Richmond, Virginia</p>
                 </div>
-                <span class="job-scope">Incident operations • Dashboards • Monitoring transition</span>
+                <span class="job-scope">Incident ops &middot; Dashboards &middot; Monitoring</span>
               </div>
               <p class="job-summary">
                 Built dashboards for real-time incident visibility, coordinated major incident response, and helped
@@ -331,15 +373,15 @@
             </div>
           </article>
 
-          <article class="job-card reveal">
-            <p class="job-period">2012 to 2013</p>
-            <div class="job-main">
-              <div class="job-heading">
+          <article class="job-card reveal delay-4">
+            <span class="job-period">2012 &mdash; 2013</span>
+            <div class="job-body">
+              <div class="job-top">
                 <div>
-                  <h3>Tech I</h3>
-                  <p>Amazon • Chester, Virginia</p>
+                  <h3 class="job-title">Tech I</h3>
+                  <p class="job-company">Amazon &middot; Chester, Virginia</p>
                 </div>
-                <span class="job-scope">Infrastructure support • Linux • Networking</span>
+                <span class="job-scope">Infrastructure &middot; Linux &middot; Networking</span>
               </div>
               <p class="job-summary">
                 Supported fulfillment-center infrastructure including Linux systems, network switches, and operational
@@ -350,90 +392,95 @@
         </div>
       </section>
 
-      <section id="skills" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Core strengths</p>
-          <h2>Capabilities that translate well to senior roles in high-bar engineering environments.</h2>
-          <p>
+      <!-- Skills -->
+      <section id="skills" class="section container">
+        <div class="section-header reveal">
+          <p class="section-label">Core strengths</p>
+          <h2 class="section-title">Capabilities that translate to senior roles in high-bar engineering environments.</h2>
+          <p class="section-desc">
             My profile is strongest where engineering leadership, production reliability, developer platform standards,
             and cross-functional influence all need to coexist.
           </p>
         </div>
         <div class="skills-grid">
           <article class="skills-card reveal">
-            <h3>Leadership and org design</h3>
+            <h3>Leadership &amp; org design</h3>
             <div class="chip-group">
-              <span>Team development</span>
-              <span>Coaching</span>
-              <span>Hiring</span>
-              <span>Cross-functional alignment</span>
-              <span>OKRs</span>
-              <span>Operating models</span>
+              <span class="chip">Team development</span>
+              <span class="chip">Coaching</span>
+              <span class="chip">Hiring</span>
+              <span class="chip">Cross-functional alignment</span>
+              <span class="chip">OKRs</span>
+              <span class="chip">Operating models</span>
             </div>
           </article>
           <article class="skills-card reveal delay-1">
-            <h3>Reliability and production engineering</h3>
+            <h3>Reliability &amp; production engineering</h3>
             <div class="chip-group">
-              <span>Incident response</span>
-              <span>SLO/SLI frameworks</span>
-              <span>Blameless postmortems</span>
-              <span>Capacity planning</span>
-              <span>Reliability reviews</span>
-              <span>Release readiness</span>
+              <span class="chip">Incident response</span>
+              <span class="chip">SLO/SLI frameworks</span>
+              <span class="chip">Blameless postmortems</span>
+              <span class="chip">Capacity planning</span>
+              <span class="chip">Reliability reviews</span>
+              <span class="chip">Release readiness</span>
             </div>
           </article>
           <article class="skills-card reveal delay-2">
-            <h3>Platform and cloud</h3>
+            <h3>Platform &amp; cloud</h3>
             <div class="chip-group">
-              <span>AWS</span>
-              <span>GCP</span>
-              <span>Kubernetes</span>
-              <span>Docker</span>
-              <span>Terraform</span>
-              <span>GitHub Actions</span>
-              <span>Jenkins</span>
-              <span>ArgoCD</span>
-              <span>Flux</span>
+              <span class="chip">AWS</span>
+              <span class="chip">GCP</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Terraform</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">Jenkins</span>
+              <span class="chip">ArgoCD</span>
+              <span class="chip">Flux</span>
             </div>
           </article>
           <article class="skills-card reveal delay-3">
-            <h3>Tooling and automation</h3>
+            <h3>Tooling &amp; automation</h3>
             <div class="chip-group">
-              <span>Python</span>
-              <span>Go</span>
-              <span>Bash</span>
-              <span>Grafana</span>
-              <span>Datadog</span>
-              <span>Prometheus</span>
-              <span>Splunk</span>
-              <span>Distributed tracing</span>
-              <span>REST APIs</span>
+              <span class="chip">Python</span>
+              <span class="chip">Go</span>
+              <span class="chip">Bash</span>
+              <span class="chip">Grafana</span>
+              <span class="chip">Datadog</span>
+              <span class="chip">Prometheus</span>
+              <span class="chip">Splunk</span>
+              <span class="chip">Distributed tracing</span>
+              <span class="chip">REST APIs</span>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Operating principles</p>
-          <h2>How I lead under scale and pressure.</h2>
+      <!-- Principles -->
+      <section class="section container">
+        <div class="section-header reveal">
+          <p class="section-label">Operating principles</p>
+          <h2 class="section-title">How I lead under scale and pressure.</h2>
         </div>
         <div class="principles-grid">
-          <article class="principle reveal">
+          <article class="principle-card reveal">
+            <div class="principle-number">01</div>
             <h3>Build systems people can trust</h3>
             <p>
               Strong engineering cultures need strong defaults. I focus on standards, transparency, and follow-through
               so teams know how to operate when the stakes are high.
             </p>
           </article>
-          <article class="principle reveal delay-1">
+          <article class="principle-card reveal delay-1">
+            <div class="principle-number">02</div>
             <h3>Use rigor to create speed</h3>
             <p>
               Well-designed guardrails, better observability, and cleaner deployment patterns make teams faster because
               they reduce avoidable friction and firefighting.
             </p>
           </article>
-          <article class="principle reveal delay-2">
+          <article class="principle-card reveal delay-2">
+            <div class="principle-number">03</div>
             <h3>Stay technical enough to lead credibly</h3>
             <p>
               I do my best work close enough to architecture and platform decisions to challenge assumptions, guide
@@ -443,19 +490,24 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact-section reveal">
-        <div class="contact-shell">
-          <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>Open to senior engineering leadership roles in reliability, platform, and production engineering.</h2>
-            <p>
-              Based in Richmond, Virginia. I am especially interested in opportunities where technical judgment,
+      <!-- Contact -->
+      <section id="contact" class="section contact-section container">
+        <div class="contact-card reveal">
+          <div>
+            <p class="contact-label">Contact</p>
+            <h2 class="contact-title">Open to senior engineering leadership roles in reliability, platform, and production engineering.</h2>
+            <p class="contact-desc">
+              Based in Richmond, Virginia. Especially interested in opportunities where technical judgment,
               organizational design, and operational excellence are all part of the mandate.
             </p>
           </div>
           <div class="contact-actions">
-            <a class="button button-light" href="mailto:david.margot@gmail.com">david.margot@gmail.com</a>
-            <a class="button button-light-secondary" href="https://www.linkedin.com/in/david-margot" target="_blank" rel="noreferrer">
+            <a class="btn-contact btn-contact-primary" href="mailto:david.margot@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"/><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"/></svg>
+              david.margot@gmail.com
+            </a>
+            <a class="btn-contact btn-contact-secondary" href="https://www.linkedin.com/in/davidmargot" target="_blank" rel="noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               LinkedIn
             </a>
           </div>
@@ -464,8 +516,10 @@
     </main>
 
     <footer class="site-footer">
-      <p>David Margot • Richmond, VA • AWS Developer and ITIL Foundations certified</p>
-      <p><span id="year"></span> • Built to present leadership, platform judgment, and measurable engineering impact.</p>
+      <div class="footer-inner">
+        <p class="footer-text">David Margot &middot; Richmond, VA &middot; <span id="year"></span></p>
+        <p class="footer-certs">AWS Developer &amp; ITIL Foundations certified</p>
+      </div>
     </footer>
 
     <script src="main.js"></script>
