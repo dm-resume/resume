@@ -35,6 +35,13 @@
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             revealObserver.unobserve(entry.target);
+            // Drop the stagger delay once the entrance finishes, so later
+            // hover/state transitions on this element fire immediately.
+            entry.target.addEventListener(
+              "transitionend",
+              () => entry.target.classList.add("settled"),
+              { once: true }
+            );
           }
         });
       },
@@ -103,8 +110,14 @@
   const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".site-nav a")];
 
+  const headerHeight =
+    parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue("--header-height"),
+      10
+    ) || 64;
+
   const syncActiveNav = () => {
-    const offset = window.scrollY + 120;
+    const offset = window.scrollY + headerHeight + 48;
     let activeId = sections[0]?.id;
 
     sections.forEach((section) => {
