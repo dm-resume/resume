@@ -17,7 +17,7 @@ Open [http://localhost:4173](http://localhost:4173). GitHub Pages serves the sam
 - `main.js`: mobile navigation and copyright year. All primary content remains available without JavaScript.
 - `assets/fonts/`: self-hosted DM Sans and Instrument Serif; license notices included.
 
-Content was updated from David Margot’s 2026 resume in November 2026. Dates, titles, and results are attributed to their respective employers. LinkedIn is the only contact destination; no resume PDF or email address is published.
+Content was updated from David Margot’s 2026 resume in November 2026. Dates, titles, and results are attributed to their respective employers. LinkedIn is the only contact destination; no resume PDF or email address is published. Team scope is described without headcount or team-count figures; retain measurable reliability and performance outcomes.
 
 ## Before publishing
 
